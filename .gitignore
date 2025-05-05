@@ -27,6 +27,9 @@ version.py
 *.npy
 
 # Exceptions for colorize_output folder
+!assets/test_images/*.png
+!assets/test_images/*.JPEG
+!assets/test_images/*.jpg
 !colorize_output/
 !colorize_output/*.png
 !colorize_output/*.jpeg
