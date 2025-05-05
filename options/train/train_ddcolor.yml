@@ -2,7 +2,7 @@
 name: train_ddcolor_l
 model_type: ColorModel
 scale: 1
-num_gpu: 4
+num_gpu: 1
 manual_seed: 0
 queue_size: 64
 
@@ -12,7 +12,7 @@ datasets:
     name: ImageNet
     type: LabDataset
     dataroot_gt: /
-    meta_info_file: ['data_list/imagenet.txt']
+    meta_info_file: ['data_list/imagenetmini.txt']
     io_backend:
       type: disk
 
@@ -31,8 +31,8 @@ datasets:
 
     # data loader
     use_shuffle: true
-    num_worker_per_gpu: 8
-    batch_size_per_gpu: 4
+    num_worker_per_gpu: 4
+    batch_size_per_gpu: 1
     dataset_enlarge_ratio: 1
     prefetch_mode: ~
 
@@ -42,7 +42,7 @@ datasets:
     type: LabDataset
     # dataroot_gt: path_to_gt
     dataroot_gt: /
-    meta_info_file: 'data_list/imagenet_val_5k.txt'
+    meta_info_file: 'data_list/imagenetmini.txt'
     gt_size: 256
     io_backend:
       type: disk
@@ -101,7 +101,7 @@ train:
     milestones: [80000, 120000, 160000, 200000, 240000, 280000, 320000, 360000]
     gamma: 0.5
 
-  total_iter: 400000
+  total_iter: 100000
   warmup_iter: -1  # no warm up
 
   # losses
@@ -136,7 +136,7 @@ train:
 # Uncomment these for validation
 # validation settings
 val:
-  val_freq: !!float 1e4
+  val_freq: !!float 2e4
   save_img: False
   pbar: True
 
