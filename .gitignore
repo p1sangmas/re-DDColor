@@ -26,6 +26,13 @@ version.py
 *.zip
 *.npy
 
+# Exceptions for colorize_output folder
+!colorize_output/
+!colorize_output/*.png
+!colorize_output/*.jpeg
+!colorize_output/*.jpg
+!colorize_output/*.gif
+
 # template
 
 # Byte-compiled / optimized / DLL files
