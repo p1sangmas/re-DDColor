@@ -16,3 +16,4 @@ tensorboard
 huggingface_hub
 ipykernel
 matplotlib
+modelscope

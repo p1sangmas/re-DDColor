@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ddcolor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./modelscope:/app/modelscope
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

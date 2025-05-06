@@ -54,6 +54,31 @@ pip install -r requirements.txt
 python pretraindownload.py
 ```
 
+## Docker Implementation
+
+For the easiest and most consistent experience across different platforms, you can use Docker:
+
+```bash
+# Build the Docker image
+docker build -t ddcolor-app .
+
+# Run the container
+docker run -p 8501:8501 ddcolor-app
+
+# Access the web application
+# Open http://localhost:8501 in your browser
+```
+
+### Advantages of using Docker:
+- No need to install dependencies manually
+- Works consistently across Windows, macOS, and Linux
+- Model is downloaded automatically during the build process
+- All required libraries are pre-configured
+
+### Requirements:
+- Docker installed on your system ([Get Docker](https://docs.docker.com/get-docker/))
+- At least 2GB of free disk space
+
 ## Usage
 
 ### Web Interface (Gradio)
