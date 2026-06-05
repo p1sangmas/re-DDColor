@@ -44,7 +44,7 @@ You can try colorizing your own images using the methods described in the [Usage
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/re-DDColor.git
+git clone https://github.com/p1sangmas/re-DDColor.git
 cd re-DDColor
 
 # Install dependencies
